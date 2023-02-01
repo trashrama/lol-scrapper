@@ -111,7 +111,7 @@ for i in range(len(secoes)):
     campeoes_db[i].append(func)
     campeoes_db[i].append(dificuldade)
 
-    time.sleep(3   )
+    navegador.implicitly_wait(3)
     WebDriverWait(navegador, 100).until(EC.visibility_of_all_elements_located((By.TAG_NAME, 'section')))
 
     bloco = navegador.find_element(By.TAG_NAME, 'section')
